@@ -30,7 +30,7 @@ urlsRouter.post("/shorten", async (req, res) => {
     });
 
     await newUrl.save();
-    console.log(newUrl.shortUrl)
+    // console.log(newUrl.shortUrl)
     res.json({ msg: "URL shortened successfully", shortUrl: newUrl.shortUrl });
   } catch (error) {
     console.error("Error in URL shortening:", error);
@@ -40,7 +40,7 @@ urlsRouter.post("/shorten", async (req, res) => {
 
   
   urlsRouter.get("/:shortCode", async (req, res) => {
-    // const { shortCode } = req.params;
+    const { shortCode } = req.params;
     console.log("Received shortCode:", shortCode); // Log the received short code
 
     try {
