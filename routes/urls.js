@@ -18,8 +18,8 @@ urlsRouter.post("/shorten", async (req, res) => {
 
   try {
     const shortCode = shortid.generate();
-    // const baseUrl = process.env.BASE_URL || "http://localhost:4500/urls";
-    const baseUrl = process.env.NEW_URL || "https://day-38-dbconnection.onrender.com/urls";
+    const baseUrl = process.env.BASE_URL || "http://localhost:4500/urls";
+    // const baseUrl = process.env.NEW_URL || "https://day-38-dbconnection.onrender.com/urls";
 
 
     const newUrl = new urlModel({
